@@ -29,13 +29,13 @@ function sumarArray(numeros, cb) {
   // Pasa el resultado a `cb`
   // No es necesario devolver nada
   //Tu código:
-  var total=0;
-  for ( i=0; i<numeros.length ; i++){
-  total = numeros[i]+total;
-  
-  }
-  cb(total);
 
+  var total= numeros.reduce(function (acc,elemento)
+  {
+    return acc+elemento;
+  });
+
+cb(total);
 }
 
 function forEach(array, cb) {
